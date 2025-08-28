@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "My Linktree",
-  description: "Linktree buatan saya sendiri",
+  title: "MyLinks",
+  description:
+    "A curated collection of my personal links — including profiles, projects, and resources — all in one place.",
 };
 
 export default function RootLayout({
