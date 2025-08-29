@@ -3,7 +3,8 @@
 import { links } from "@/data/links";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiMail } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
 
 export default function HomePage() {
   return (
@@ -28,6 +29,23 @@ export default function HomePage() {
           </h1>
           <p className="text-white/90 text-sm">Software Engineer</p>
 
+          <div className="flex justify-center gap-4 mt-2">
+            <a
+              href="mailto:yourmail@example.com"
+              className="text-white hover:text-indigo-200 transition"
+            >
+              <FiMail className="w-6 h-6" />
+            </a>
+            <a
+              href="https://instagram.com/advenchristo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-green-400 transition"
+            >
+              <FaInstagram className="w-6 h-6" />
+            </a>
+          </div>
+
           <div className="mt-8 space-y-4">
             {links.map((link, idx) => {
               const Icon = link.icon;
@@ -47,7 +65,7 @@ export default function HomePage() {
                     <Icon className="w-5 h-5 text-indigo-600" />
                     <span>{link.title}</span>
                   </div>
-                  <FiExternalLink  className="w-4 h-4 text-gray-600" />
+                  <FiExternalLink className="w-4 h-4 text-gray-600" />
                 </motion.a>
               );
             })}
